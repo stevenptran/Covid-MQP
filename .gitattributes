@@ -1,0 +1,2 @@
+50statetest.csv filter=lfs diff=lfs merge=lfs -text
+Datasets/U.S._State_and_Territorial_Orders_Closing_and_Reopening_Restaurants_Issued_from_March_11__2020_through_August_15__2021_by_County_by_Day.csv filter=lfs diff=lfs merge=lfs -text
