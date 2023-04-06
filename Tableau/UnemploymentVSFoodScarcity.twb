@@ -1,0 +1,1113 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.22.1117.1841                               -->
+<workbook original-version='18.1' source-build='2022.4.0 (20224.22.1117.1841)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='unemployment_rate2020.csv+ (Multiple Connections)' inline='true' name='federated.1ypj9ws1kfqmuk18cclrz0sc4jy6' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='unemployment_rate2020' name='textscan.0ontu5n19v2ryk1cf4l8r0v9r2a1'>
+            <connection class='textscan' directory='C:/Users/trans/OneDrive - Worcester Polytechnic Institute (wpi.edu)/MQP/Covid-MQP/Datasets' filename='unemployment_rate2020.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='FoodScarcity2020' name='textscan.1iitls01xym1gl10a8w331xnqoej'>
+            <connection class='textscan' directory='C:/Users/trans/OneDrive - Worcester Polytechnic Institute (wpi.edu)/MQP/Covid-MQP/Datasets' filename='FoodScarcity2020.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='unemployment_rate2021' name='textscan.1cymvyq07mjkva11ixpas17591ty'>
+            <connection class='textscan' directory='C:/Users/trans/OneDrive - Worcester Polytechnic Institute (wpi.edu)/MQP/Covid-MQP/Datasets' filename='unemployment_rate2021.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='FoodScarcity2021' name='textscan.0nntkyv1ja2hby136adov0zy74t5'>
+            <connection class='textscan' directory='C:/Users/trans/OneDrive - Worcester Polytechnic Institute (wpi.edu)/MQP/Covid-MQP/Datasets' filename='FoodScarcity2021.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='FoodScarcity2020.csv' table='[FoodScarcity2020#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Area' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='integer' name='Number' ordinal='2' />
+            <column datatype='integer' name='Margin of Error +/-' ordinal='3' />
+            <column datatype='real' name='Percent' ordinal='4' />
+            <column datatype='real' name='Percent Margin of Error +/-' ordinal='5' />
+            <column datatype='integer' name='Measure Universe' ordinal='6' />
+            <column datatype='integer' name='Total Population age 18+' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0ontu5n19v2ryk1cf4l8r0v9r2a1' name='unemployment_rate2020.csv' table='[unemployment_rate2020#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='State' ordinal='0' />
+              <column datatype='real' name='2020rate' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='FoodScarcity2020.csv' table='[FoodScarcity2020#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Area' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='integer' name='Number' ordinal='2' />
+              <column datatype='integer' name='Margin of Error +/-' ordinal='3' />
+              <column datatype='real' name='Percent' ordinal='4' />
+              <column datatype='real' name='Percent Margin of Error +/-' ordinal='5' />
+              <column datatype='integer' name='Measure Universe' ordinal='6' />
+              <column datatype='integer' name='Total Population age 18+' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='unemployment_rate2021.csv' table='[unemployment_rate2021#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='State' ordinal='0' />
+              <column datatype='real' name='2021rate' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='FoodScarcity2021.csv' table='[FoodScarcity2021#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Area' ordinal='0' />
+              <column datatype='string' name='year' ordinal='1' />
+              <column datatype='integer' name='Number' ordinal='2' />
+              <column datatype='integer' name='Margin of Error +/-' ordinal='3' />
+              <column datatype='real' name='Percent' ordinal='4' />
+              <column datatype='real' name='Percent Margin of Error +/-' ordinal='5' />
+              <column datatype='integer' name='Measure Universe' ordinal='6' />
+              <column datatype='integer' name='Total Population age 18+' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[2020rate]' value='[unemployment_rate2020.csv].[2020rate]' />
+          <map key='[2021rate]' value='[unemployment_rate2021.csv].[2021rate]' />
+          <map key='[Area (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Area]' />
+          <map key='[Area]' value='[FoodScarcity2020.csv].[Area]' />
+          <map key='[Margin of Error +/- (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Margin of Error +/-]' />
+          <map key='[Margin of Error +/-]' value='[FoodScarcity2020.csv].[Margin of Error +/-]' />
+          <map key='[Measure Universe (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Measure Universe]' />
+          <map key='[Measure Universe]' value='[FoodScarcity2020.csv].[Measure Universe]' />
+          <map key='[Number (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Number]' />
+          <map key='[Number]' value='[FoodScarcity2020.csv].[Number]' />
+          <map key='[Percent (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Percent]' />
+          <map key='[Percent Margin of Error +/- (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Percent Margin of Error +/-]' />
+          <map key='[Percent Margin of Error +/-]' value='[FoodScarcity2020.csv].[Percent Margin of Error +/-]' />
+          <map key='[Percent]' value='[FoodScarcity2020.csv].[Percent]' />
+          <map key='[State (unemployment_rate2021.csv)]' value='[unemployment_rate2021.csv].[State]' />
+          <map key='[State]' value='[unemployment_rate2020.csv].[State]' />
+          <map key='[Total Population age 18+ (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[Total Population age 18+]' />
+          <map key='[Total Population age 18+]' value='[FoodScarcity2020.csv].[Total Population age 18+]' />
+          <map key='[year (FoodScarcity2021.csv)]' value='[FoodScarcity2021.csv].[year]' />
+          <map key='[year]' value='[FoodScarcity2020.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[unemployment_rate2020.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[unemployment_rate2021.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[unemployment_rate2020.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[unemployment_rate2020.csv_C2C453A088D74B41ABE8B44F6943EE3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2020rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[2020rate]</local-name>
+            <parent-name>[unemployment_rate2020.csv]</parent-name>
+            <remote-alias>2020rate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[unemployment_rate2020.csv_C2C453A088D74B41ABE8B44F6943EE3A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Number</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Margin of Error +/-</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Margin of Error +/-]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Margin of Error +/-</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Percent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Margin of Error +/-</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent Margin of Error +/-]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Percent Margin of Error +/-</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Measure Universe</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Measure Universe]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Measure Universe</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Population age 18+</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Population age 18+]</local-name>
+            <parent-name>[FoodScarcity2020.csv]</parent-name>
+            <remote-alias>Total Population age 18+</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State (unemployment_rate2021.csv)]</local-name>
+            <parent-name>[unemployment_rate2021.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2021rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[2021rate]</local-name>
+            <parent-name>[unemployment_rate2021.csv]</parent-name>
+            <remote-alias>2021rate</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[year (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Number</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Margin of Error +/-</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Margin of Error +/- (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Margin of Error +/-</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Percent</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percent Margin of Error +/-</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percent Margin of Error +/- (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Percent Margin of Error +/-</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Measure Universe</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Measure Universe (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Measure Universe</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Population age 18+</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Population age 18+ (FoodScarcity2021.csv)]</local-name>
+            <parent-name>[FoodScarcity2021.csv]</parent-name>
+            <remote-alias>Total Population age 18+</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='2020Rate' datatype='real' name='[2020rate]' role='measure' type='quantitative' />
+      <column caption='2021Rate' datatype='real' name='[2021rate]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number (FoodScarcity2021.csv)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number]' role='dimension' type='ordinal' />
+      <column caption='State (unemployment rate2021.csv)' datatype='string' name='[State (unemployment_rate2021.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='FoodScarcity2020.csv' datatype='table' name='[__tableau_internal_object_id__].[FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='FoodScarcity2021.csv' datatype='table' name='[__tableau_internal_object_id__].[FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='unemployment_rate2020.csv' datatype='table' name='[__tableau_internal_object_id__].[unemployment_rate2020.csv_C2C453A088D74B41ABE8B44F6943EE3A]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='unemployment_rate2021.csv' datatype='table' name='[__tableau_internal_object_id__].[unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='FoodScarcity2020.csv' id='FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D'>
+            <properties context=''>
+              <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='FoodScarcity2020.csv' table='[FoodScarcity2020#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Area' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='integer' name='Number' ordinal='2' />
+                  <column datatype='integer' name='Margin of Error +/-' ordinal='3' />
+                  <column datatype='real' name='Percent' ordinal='4' />
+                  <column datatype='real' name='Percent Margin of Error +/-' ordinal='5' />
+                  <column datatype='integer' name='Measure Universe' ordinal='6' />
+                  <column datatype='integer' name='Total Population age 18+' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='FoodScarcity2021.csv' id='FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853'>
+            <properties context=''>
+              <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='FoodScarcity2021.csv' table='[FoodScarcity2021#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Area' ordinal='0' />
+                  <column datatype='string' name='year' ordinal='1' />
+                  <column datatype='integer' name='Number' ordinal='2' />
+                  <column datatype='integer' name='Margin of Error +/-' ordinal='3' />
+                  <column datatype='real' name='Percent' ordinal='4' />
+                  <column datatype='real' name='Percent Margin of Error +/-' ordinal='5' />
+                  <column datatype='integer' name='Measure Universe' ordinal='6' />
+                  <column datatype='integer' name='Total Population age 18+' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='unemployment_rate2020.csv' id='unemployment_rate2020.csv_C2C453A088D74B41ABE8B44F6943EE3A'>
+            <properties context=''>
+              <relation connection='textscan.0ontu5n19v2ryk1cf4l8r0v9r2a1' name='unemployment_rate2020.csv' table='[unemployment_rate2020#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='State' ordinal='0' />
+                  <column datatype='real' name='2020rate' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='unemployment_rate2021.csv' id='unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5'>
+            <properties context=''>
+              <relation connection='textscan.1iitls01xym1gl10a8w331xnqoej' name='unemployment_rate2021.csv' table='[unemployment_rate2021#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='State' ordinal='0' />
+                  <column datatype='real' name='2021rate' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[State]' />
+              <expression op='[Area]' />
+            </expression>
+            <first-end-point object-id='unemployment_rate2020.csv_C2C453A088D74B41ABE8B44F6943EE3A' />
+            <second-end-point object-id='FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[State (unemployment_rate2021.csv)]' />
+              <expression op='[Area (FoodScarcity2021.csv)]' />
+            </expression>
+            <first-end-point object-id='unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5' />
+            <second-end-point object-id='FoodScarcity2021.csv_02EEABDDBFF24AFC8FA6E0704E286853' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Area]' />
+              <expression op='[State (unemployment_rate2021.csv)]' />
+            </expression>
+            <first-end-point object-id='FoodScarcity2020.csv_348D10E520AB4B7091C45C83BB481A8D' />
+            <second-end-point object-id='unemployment_rate2021.csv_5DC8231280C04FE0A0973453B5FD9EB5' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Unemployment Rate vs. Food Scarcity (2020)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='unemployment_rate2020.csv+ (Multiple Connections)' name='federated.1ypj9ws1kfqmuk18cclrz0sc4jy6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ypj9ws1kfqmuk18cclrz0sc4jy6'>
+            <column caption='2020Rate' datatype='real' name='[2020rate]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Percent]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Percent]' derivation='Avg' name='[avg:Percent:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[2020rate]' derivation='Sum' name='[sum:2020rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[sum:2020rate:qk]' field-type='quantitative' max='15.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[avg:Percent:qk]' field-type='quantitative' max='20.0' min='0.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[none:State:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[sum:2020rate:qk]</rows>
+        <cols>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[avg:Percent:qk]</cols>
+      </table>
+      <simple-id uuid='{624FC4B3-4E9B-4D51-B5F3-553FBA77A171}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Unemployment Rate vs. Food Scarcity (2021)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='unemployment_rate2020.csv+ (Multiple Connections)' name='federated.1ypj9ws1kfqmuk18cclrz0sc4jy6' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ypj9ws1kfqmuk18cclrz0sc4jy6'>
+            <column caption='2021Rate' datatype='real' name='[2021rate]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Percent (FoodScarcity2021.csv)]' role='measure' type='quantitative' />
+            <column caption='State (unemployment rate2021.csv)' datatype='string' name='[State (unemployment_rate2021.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Percent (FoodScarcity2021.csv)]' derivation='Avg' name='[avg:Percent (FoodScarcity2021.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[State (unemployment_rate2021.csv)]' derivation='None' name='[none:State (unemployment_rate2021.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[2021rate]' derivation='Sum' name='[sum:2021rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[avg:Percent (FoodScarcity2021.csv):qk]' field-type='quantitative' max='20.0' min='0.0' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[sum:2021rate:qk]' field-type='quantitative' max='15.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[none:State (unemployment_rate2021.csv):nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[sum:2021rate:qk]</rows>
+        <cols>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[avg:Percent (FoodScarcity2021.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{1CC856D9-8B8D-48FF-A2C6-18CA84FDD0E9}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='2400' maxwidth='1200' minheight='2400' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49667' id='3' name='Sheet 1' w='98666' x='667' y='333'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49667' id='5' name='Sheet 2' w='98666' x='667' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99334' id='16' param='vert' type-v2='layout-flow' w='98666' x='667' y='333'>
+                <zone fixed-size='280' h='49667' id='3' is-fixed='true' name='Sheet 1' w='98666' x='667' y='333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49667' id='5' is-fixed='true' name='Sheet 2' w='98666' x='667' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{541E2BA3-78C4-4786-A38B-2BE7DA858353}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[none:State:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B2C29495-1FAB-4731-A2B6-B187CD53310F}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ypj9ws1kfqmuk18cclrz0sc4jy6].[none:State (unemployment_rate2021.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{02D266AE-6F3F-4D8D-BDF9-31072190A95F}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{1D114051-A8CB-459B-AEB3-0A8FBF573C02}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
