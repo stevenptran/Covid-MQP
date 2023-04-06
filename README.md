@@ -1,6 +1,6 @@
 # Answering Unique Questions Pertaining to the COVID-19 Pandemic
 
-## Worcester Polytechnic Institute Major Qualifying Project
+## Worcester Polytechnic Institute - Major Qualifying Project
 **Dates:** August 24, 2022 - March 15, 2023
 
 ### Team Members
@@ -12,7 +12,9 @@
 | Tia Mehta     | Computer Science           |
 
 ### Advisor
-Torumoy Ghoshal
+| Name           | Role                               |
+|----------------|------------------------------------|
+| Torumoy Ghoshal | Assistant Teaching Professor - Data Science Program |
 
 ### Brief Description
 MQP - Major Qualifying Project Worcester Polytechnic Institute (WPI)
@@ -46,8 +48,8 @@ This repository contains files for the data analysis, cleaning and visualization
 24. How did unemployment during the COVID-19 pandemic affect mental health help?
 
 ### Directory & File Descriptions
-- Questions: this folder contains individual folders for each question we answered. Each one of the question folders will contain the resources used to answer the question.
-- AnsweringUniqueQuestionsCOVID19_MQPReport.pdf: This is the report written by the team for this project. Please read for more details pertaining to the project.
+- `Questions`: this folder contains individual folders for each question we answered. Each one of the question folders will contain the resources used to answer the question.
+- `AnsweringUniqueQuestionsCOVID19_MQPReport.pdf`: This is the report written by the team for this project. Please read for more details pertaining to the project.
 
 ### Notes
-- Datasets used will be added as a comment in the *.ipynb files. This is to ensure that the most recently updated data is being used when run.
+- Datasets used will be added as a comment in the `*.ipynb files`. This is to ensure that the most recently updated data is being used when run.
