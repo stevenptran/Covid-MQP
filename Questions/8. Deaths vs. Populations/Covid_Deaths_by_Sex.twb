@@ -1,0 +1,1157 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0916.1526                               -->
+<workbook original-version='18.1' source-build='2022.2.2 (20222.22.0916.1526)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource inline='true' name='Clipboard_20221011T082416' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20221011T082416' name='Clipboard_20221011T082416leaf'>
+            <connection class='textscan' directory='/Users/dylanshanes/Documents/My Tableau Repository/Datasources' filename='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='Clipboard_20221011T082416leaf' name='Clipboard_20221011T082416#txt' table='[Clipboard_20221011T082416#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Data as of' ordinal='0' />
+            <column datatype='string' name='State' ordinal='1' />
+            <column datatype='integer' name='MMWR Week' ordinal='2' />
+            <column datatype='date' name='End Week' ordinal='3' />
+            <column datatype='string' name='Sex' ordinal='4' />
+            <column datatype='string' name='Age Group' ordinal='5' />
+            <column datatype='integer' name='Total Deaths' ordinal='6' />
+            <column datatype='integer' name='COVID-19 Deaths' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='Clipboard_20221011T082416leaf' name='Clipboard_20221011T082416#txt' table='[Clipboard_20221011T082416#txt]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Data as of' ordinal='0' />
+            <column datatype='string' name='State' ordinal='1' />
+            <column datatype='integer' name='MMWR Week' ordinal='2' />
+            <column datatype='date' name='End Week' ordinal='3' />
+            <column datatype='string' name='Sex' ordinal='4' />
+            <column datatype='string' name='Age Group' ordinal='5' />
+            <column datatype='integer' name='Total Deaths' ordinal='6' />
+            <column datatype='integer' name='COVID-19 Deaths' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data as of</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Data as of]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>Data as of</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MMWR Week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MMWR Week]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>MMWR Week</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Week</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[End Week]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>End Week</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Age Group]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>Age Group</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Deaths]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>Total Deaths</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COVID-19 Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COVID-19 Deaths]</local-name>
+            <parent-name>[Clipboard_20221011T082416#txt]</parent-name>
+            <remote-alias>COVID-19 Deaths</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Clipboard_20221011T082416]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[MMWR Week]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Clipboard_20221011T082416' datatype='table' name='[__tableau_internal_object_id__].[Clipboard_20221011T082416]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Clipboard_20221011T082416' id='Clipboard_20221011T082416'>
+            <properties context=''>
+              <relation connection='Clipboard_20221011T082416leaf' name='Clipboard_20221011T082416#txt' table='[Clipboard_20221011T082416#txt]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Data as of' ordinal='0' />
+                  <column datatype='string' name='State' ordinal='1' />
+                  <column datatype='integer' name='MMWR Week' ordinal='2' />
+                  <column datatype='date' name='End Week' ordinal='3' />
+                  <column datatype='string' name='Sex' ordinal='4' />
+                  <column datatype='string' name='Age Group' ordinal='5' />
+                  <column datatype='integer' name='Total Deaths' ordinal='6' />
+                  <column datatype='integer' name='COVID-19 Deaths' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='Provisional_COVID-19_Deaths_by_Sex_and_Age' inline='true' name='federated.01o1qpx1jf54491dsfooq0j748vw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Provisional_COVID-19_Deaths_by_Sex_and_Age' name='textscan.0ru9s5m0851fqf1f8dgdd0bdddbr'>
+            <connection class='textscan' directory='/Users/dylanshanes/Documents/MQP/Covid-MQP/Datasets' filename='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ru9s5m0851fqf1f8dgdd0bdddbr' name='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' table='[Provisional_COVID-19_Deaths_by_Sex_and_Age#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Data As Of' ordinal='0' />
+            <column datatype='date' name='Start Date' ordinal='1' />
+            <column datatype='date' name='End Date' ordinal='2' />
+            <column datatype='string' name='Group' ordinal='3' />
+            <column datatype='string' name='Year' ordinal='4' />
+            <column datatype='string' name='Month' ordinal='5' />
+            <column datatype='string' name='State' ordinal='6' />
+            <column datatype='string' name='Sex' ordinal='7' />
+            <column datatype='string' name='Age Group' ordinal='8' />
+            <column datatype='integer' name='COVID-19 Deaths' ordinal='9' />
+            <column datatype='integer' name='Total Deaths' ordinal='10' />
+            <column datatype='integer' name='Pneumonia Deaths' ordinal='11' />
+            <column datatype='integer' name='Pneumonia and COVID-19 Deaths' ordinal='12' />
+            <column datatype='integer' name='Influenza Deaths' ordinal='13' />
+            <column datatype='integer' name='Pneumonia, Influenza, or COVID-19 Deaths' ordinal='14' />
+            <column datatype='string' name='Footnote' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ru9s5m0851fqf1f8dgdd0bdddbr' name='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' table='[Provisional_COVID-19_Deaths_by_Sex_and_Age#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Data As Of' ordinal='0' />
+            <column datatype='date' name='Start Date' ordinal='1' />
+            <column datatype='date' name='End Date' ordinal='2' />
+            <column datatype='string' name='Group' ordinal='3' />
+            <column datatype='string' name='Year' ordinal='4' />
+            <column datatype='string' name='Month' ordinal='5' />
+            <column datatype='string' name='State' ordinal='6' />
+            <column datatype='string' name='Sex' ordinal='7' />
+            <column datatype='string' name='Age Group' ordinal='8' />
+            <column datatype='integer' name='COVID-19 Deaths' ordinal='9' />
+            <column datatype='integer' name='Total Deaths' ordinal='10' />
+            <column datatype='integer' name='Pneumonia Deaths' ordinal='11' />
+            <column datatype='integer' name='Pneumonia and COVID-19 Deaths' ordinal='12' />
+            <column datatype='integer' name='Influenza Deaths' ordinal='13' />
+            <column datatype='integer' name='Pneumonia, Influenza, or COVID-19 Deaths' ordinal='14' />
+            <column datatype='string' name='Footnote' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Data As Of</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Data As Of]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Data As Of</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Start Date]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Start Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[End Date]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>End Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Group]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Group</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Age Group]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Age Group</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COVID-19 Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COVID-19 Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>COVID-19 Deaths</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Total Deaths</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pneumonia Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pneumonia Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Pneumonia Deaths</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pneumonia and COVID-19 Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pneumonia and COVID-19 Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Pneumonia and COVID-19 Deaths</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Influenza Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Influenza Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Influenza Deaths</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pneumonia, Influenza, or COVID-19 Deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pneumonia, Influenza, or COVID-19 Deaths]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Pneumonia, Influenza, or COVID-19 Deaths</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Footnote</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Footnote]</local-name>
+            <parent-name>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv]</parent-name>
+            <remote-alias>Footnote</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[COVID-19 Deaths]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Influenza Deaths]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Pneumonia Deaths]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Sex]' role='dimension' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='integer' name='[Total Deaths]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' datatype='table' name='[__tableau_internal_object_id__].[Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D]' role='measure' type='quantitative' />
+      <column-instance column='[Sex]' derivation='None' name='[none:Sex:nk]' pivot='key' type='nominal' />
+      <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      <column-instance column='[COVID-19 Deaths]' derivation='Sum' name='[sum:COVID-19 Deaths:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Influenza Deaths]' derivation='Sum' name='[sum:Influenza Deaths:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Pneumonia Deaths]' derivation='Sum' name='[sum:Pneumonia Deaths:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total Deaths]' derivation='Sum' name='[sum:Total Deaths:qk]' pivot='key' type='quantitative' />
+      <group hidden='true' name='[Exclusions (Sex,State)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Sex:nk]' />
+          <groupfilter function='level-members' level='[none:State:nk]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:State:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;District of Columbia&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Nevada&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Virginia&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Alabama&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Maryland&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Puerto Rico&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;California&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mississippi&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Tennessee&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Idaho&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;New York&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Wyoming&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Florida&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;New Hampshire&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Washington&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Colorado&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Missouri&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Texas&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Louisiana&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Oregon&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Alaska&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Massachusetts&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Rhode Island&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kansas&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ohio&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Connecticut&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Montana&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;United States&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Utah&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Illinois&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;New York City&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Indiana&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;North Carolina&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Kentucky&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Oklahoma&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Maine&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Pennsylvania&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Georgia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;New Jersey&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;West Virginia&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Delaware&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Nebraska&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Vermont&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Arizona&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Michigan&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;South Carolina&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Iowa&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;North Dakota&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Hawaii&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;New Mexico&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Wisconsin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Arkansas&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Minnesota&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;South Dakota&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:COVID-19 Deaths:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:Total Deaths:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:Pneumonia Deaths:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:Influenza Deaths:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Sex:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;All Sexes&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' id='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv_8F6CFF8A2DFE47789F6F83F36829298D'>
+            <properties context=''>
+              <relation connection='textscan.0ru9s5m0851fqf1f8dgdd0bdddbr' name='Provisional_COVID-19_Deaths_by_Sex_and_Age.csv' table='[Provisional_COVID-19_Deaths_by_Sex_and_Age#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Data As Of' ordinal='0' />
+                  <column datatype='date' name='Start Date' ordinal='1' />
+                  <column datatype='date' name='End Date' ordinal='2' />
+                  <column datatype='string' name='Group' ordinal='3' />
+                  <column datatype='string' name='Year' ordinal='4' />
+                  <column datatype='string' name='Month' ordinal='5' />
+                  <column datatype='string' name='State' ordinal='6' />
+                  <column datatype='string' name='Sex' ordinal='7' />
+                  <column datatype='string' name='Age Group' ordinal='8' />
+                  <column datatype='integer' name='COVID-19 Deaths' ordinal='9' />
+                  <column datatype='integer' name='Total Deaths' ordinal='10' />
+                  <column datatype='integer' name='Pneumonia Deaths' ordinal='11' />
+                  <column datatype='integer' name='Pneumonia and COVID-19 Deaths' ordinal='12' />
+                  <column datatype='integer' name='Influenza Deaths' ordinal='13' />
+                  <column datatype='integer' name='Pneumonia, Influenza, or COVID-19 Deaths' ordinal='14' />
+                  <column datatype='string' name='Footnote' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource name='Clipboard_20221011T082416' />
+            <datasource caption='Provisional_COVID-19_Deaths_by_Sex_and_Age' name='federated.01o1qpx1jf54491dsfooq0j748vw' />
+          </datasources>
+          <datasource-dependencies datasource='Clipboard_20221011T082416'>
+            <column datatype='integer' name='[COVID-19 Deaths]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total Deaths]' role='measure' type='quantitative' />
+            <column-instance column='[COVID-19 Deaths]' derivation='Sum' name='[sum:COVID-19 Deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Deaths]' derivation='Sum' name='[sum:Total Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.01o1qpx1jf54491dsfooq0j748vw'>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[Clipboard_20221011T082416].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20221011T082416].[sum:COVID-19 Deaths:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[Clipboard_20221011T082416].[sum:Total Deaths:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[Clipboard_20221011T082416].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[Clipboard_20221011T082416].[:Measure Names]' value='128' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[Clipboard_20221011T082416].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:State:nk]</cols>
+      </table>
+      <simple-id uuid='{1A84D941-EEBF-47D1-B07B-409AC46B6B66}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Covid Deaths by Sex</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Provisional_COVID-19_Deaths_by_Sex_and_Age' name='federated.01o1qpx1jf54491dsfooq0j748vw' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.01o1qpx1jf54491dsfooq0j748vw'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[COVID-19 Deaths]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sex]' role='dimension' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sex]' derivation='None' name='[none:Sex:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[COVID-19 Deaths]' derivation='Sum' name='[sum:COVID-19 Deaths:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01o1qpx1jf54491dsfooq0j748vw].[Exclusions (Sex,State)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:Sex:nk]' />
+                <groupfilter function='level-members' level='[none:State:nk]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:Sex:nk]' member='&quot;All Sexes&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Alabama&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Alaska&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Arizona&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Arkansas&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;California&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Colorado&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Connecticut&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Delaware&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;District of Columbia&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Florida&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Georgia&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Hawaii&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Idaho&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Illinois&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Indiana&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Iowa&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Kansas&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Kentucky&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Louisiana&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Maine&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Maryland&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Massachusetts&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Michigan&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Minnesota&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Mississippi&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Missouri&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Montana&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Nebraska&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Nevada&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;New Hampshire&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;New Jersey&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;New Mexico&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;New York&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;New York City&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;North Carolina&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;North Dakota&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Ohio&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Oklahoma&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Oregon&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Pennsylvania&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Puerto Rico&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Rhode Island&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;South Carolina&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;South Dakota&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Tennessee&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Texas&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;United States&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Utah&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Vermont&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Virginia&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Washington&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;West Virginia&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Wisconsin&quot;' />
+                    <groupfilter function='member' level='[none:State:nk]' member='&quot;Wyoming&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Sex:nk]' member='&quot;Female&quot;' />
+                    <groupfilter function='member' level='[none:Sex:nk]' member='&quot;Male&quot;' />
+                  </groupfilter>
+                  <groupfilter function='member' level='[none:State:nk]' member='&quot;United States&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.01o1qpx1jf54491dsfooq0j748vw].[none:Age Group:nk]'>
+            <groupfilter function='member' level='[none:Age Group:nk]' member='&quot;85 years and over&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.01o1qpx1jf54491dsfooq0j748vw].[Exclusions (Sex,State)]</column>
+            <column>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:Age Group:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.01o1qpx1jf54491dsfooq0j748vw].[none:Age Group:nk] / ([federated.01o1qpx1jf54491dsfooq0j748vw].[none:Sex:nk] / [federated.01o1qpx1jf54491dsfooq0j748vw].[none:State:nk]))</rows>
+        <cols>[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:COVID-19 Deaths:qk]</cols>
+      </table>
+      <simple-id uuid='{FA76B235-05FC-4E36-9A5D-1D3D0B041459}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:State:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{826C13F3-0EF0-440A-962A-5B81AB73CCCA}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[:Measure Names]</field>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:Age Group:nk]</field>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:Sex:nk]</field>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[none:State:nk]</field>
+            <field>[federated.01o1qpx1jf54491dsfooq0j748vw].[sum:Total Deaths:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{65DDECFA-86AE-4046-B317-7001CB1884F8}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+      3SO4JPYAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
