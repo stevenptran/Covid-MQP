@@ -294,8 +294,21 @@ class MyDashboard extends Component {
     }
   }
 
+  state = {
+    hoveredRow: null,
+  };
+
+  handleRowHover = (index) => {
+    this.setState({ hoveredRow: index });
+  };
+
+  handleRowLeave = () => {
+    this.setState({ hoveredRow: null });
+  };
+
   render() {
     const drawerWidth = 230;
+    const { hoveredRow } = this.state;
     return (
       <React.Fragment>
         <Drawer variant="persistent" anchor="left" open={this.state.drawerOpen}>
@@ -313,7 +326,7 @@ class MyDashboard extends Component {
               "Vaccinations",
               "Miscellaneous",
             ].map((text) => (
-              <ListItem key={text} disablePadding>
+              <ListItem key={text} disablePadding style={text === "Home" ? { borderTop: "1px solid black", borderBottom: "1px solid black" } : undefined}>
                 <ListItemButton
                   onClick={
                     text === "Home"
@@ -335,7 +348,7 @@ class MyDashboard extends Component {
                       : undefined
                   }
                 >
-                  <ListItemText primary={text} />
+                  <ListItemText primary={text} className={text === "Home" ? "my-bold-class" : undefined} />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -385,7 +398,7 @@ class MyDashboard extends Component {
                 <Typography variant="h6">Team Members:</Typography>
                 <TableContainer component={Paper}>
                   <Table>
-                    <TableHead>
+                    <TableHead style={{ backgroundColor: 'rgba(240, 128, 128, 0.2)' }}>
                       <TableRow>
                         <TableCell><b>Name</b></TableCell>
                         <TableCell><b>Major(s)</b></TableCell>
@@ -413,7 +426,7 @@ class MyDashboard extends Component {
                 <Typography variant="h6">Advisor:</Typography>
                 <TableContainer component={Paper}>
                   <Table>
-                    <TableHead>
+                    <TableHead style={{ backgroundColor: 'rgba(240, 128, 128, 0.2)' }}>
                       <TableRow>
                         <TableCell><b>Name</b></TableCell>
                         <TableCell><b>Role</b></TableCell>
@@ -436,7 +449,7 @@ class MyDashboard extends Component {
                 <Typography variant="h6"> Questions: </Typography>
                 <TableContainer component={Paper}>
                   <Table>
-                    <TableHead>
+                    <TableHead style={{ backgroundColor: 'rgba(240, 128, 128, 0.2)' }}>
                       <TableRow>
                         <TableCell><b>Question #</b></TableCell>
                         <TableCell><b>Question</b></TableCell>
@@ -444,7 +457,9 @@ class MyDashboard extends Component {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      <TableRow>
+                      <TableRow onClick={this.handleRuralUrbanClick} onMouseEnter={() => this.handleRowHover(0)}
+                onMouseLeave={this.handleRowLeave}
+                sx={{ bgcolor: 0 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         <TableCell>1</TableCell>
                         <TableCell>
                           Is there a discrepancy in COVID-19 deaths per state
@@ -452,7 +467,9 @@ class MyDashboard extends Component {
                         </TableCell>
                         <TableCell>Rural/Urban Regions</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleIncomeClick} onMouseEnter={() => this.handleRowHover(1)}
+                onMouseLeave={this.handleRowLeave}
+                sx={{ bgcolor: 1 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>2</TableCell>{" "}
                         <TableCell>
@@ -461,7 +478,9 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Income and Unemployment</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleVaxClick} onMouseEnter={() => this.handleRowHover(2)}
+                onMouseLeave={this.handleRowLeave}
+                sx={{ bgcolor: 2 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>3</TableCell>{" "}
                         <TableCell>
@@ -470,7 +489,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Vaccinations</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleRuralUrbanClick} onMouseEnter={() => this.handleRowHover(3)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 3 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>4</TableCell>{" "}
                         <TableCell>
@@ -479,7 +498,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Rural/Urban Regions</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleIncomeClick} onMouseEnter={() => this.handleRowHover(4)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 4 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>5</TableCell>{" "}
                         <TableCell>
@@ -489,7 +508,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Income and Unemployment</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleMiscClick} onMouseEnter={() => this.handleRowHover(5)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 5 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>6</TableCell>{" "}
                         <TableCell>
@@ -498,7 +517,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Miscellaneous</TableCell>{" "}
                       </TableRow>
-                      <TableRow>
+                      <TableRow onClick={this.handleMiscClick} onMouseEnter={() => this.handleRowHover(6)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 6 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>7</TableCell>{" "}
                         <TableCell>
@@ -507,7 +526,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Miscellaneous</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleMiscClick} onMouseEnter={() => this.handleRowHover(7)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 7 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>8</TableCell>{" "}
                         <TableCell>
@@ -516,7 +535,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Miscellaneous</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleVaxClick} onMouseEnter={() => this.handleRowHover(8)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 8 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>9</TableCell>{" "}
                         <TableCell>
@@ -525,7 +544,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Vaccinations</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleFoodScarcityClick} onMouseEnter={() => this.handleRowHover(9)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 9 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>10</TableCell>{" "}
                         <TableCell>
@@ -534,7 +553,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Food Scarcity</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleFoodScarcityClick} onMouseEnter={() => this.handleRowHover(10)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 10 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>11</TableCell>{" "}
                         <TableCell>
@@ -543,7 +562,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Food Scarcity</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleOnsiteWorkClick} onMouseEnter={() => this.handleRowHover(11)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 11 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>12</TableCell>{" "}
                         <TableCell>
@@ -552,7 +571,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Onsite Work</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleOnsiteWorkClick} onMouseEnter={() => this.handleRowHover(12)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 12 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>13</TableCell>{" "}
                         <TableCell>
@@ -561,7 +580,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Onsite Work</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleOnsiteWorkClick} onMouseEnter={() => this.handleRowHover(13)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 13 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>14</TableCell>{" "}
                         <TableCell>
@@ -570,7 +589,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell> Onsite Work </TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleVaxClick} onMouseEnter={() => this.handleRowHover(14)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 14 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell> 15 </TableCell>{" "}
                         <TableCell>
@@ -580,7 +599,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell> Vaccinations </TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleMiscClick} onMouseEnter={() => this.handleRowHover(15)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 15 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell> 16 </TableCell>{" "}
                         <TableCell>
@@ -590,7 +609,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell> Miscellaneous </TableCell>{" "}
                       </TableRow>
-                      <TableRow>
+                      <TableRow onClick={this.handleIncomeClick} onMouseEnter={() => this.handleRowHover(16)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 16 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell> 17 </TableCell>{" "}
                         <TableCell>
@@ -599,7 +618,7 @@ class MyDashboard extends Component {
                         </TableCell>
                         <TableCell>Income and Unemployment</TableCell>{" "}
                       </TableRow>
-                      <TableRow>
+                      <TableRow onClick={this.handleFoodScarcityClick} onMouseEnter={() => this.handleRowHover(17)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 17 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>18</TableCell>{" "}
                         <TableCell>
@@ -608,7 +627,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Food Scarcity</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleFoodScarcityClick} onMouseEnter={() => this.handleRowHover(18)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 18 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>19</TableCell>{" "}
                         <TableCell>
@@ -617,7 +636,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Food Scarcity</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleFoodScarcityClick} onMouseEnter={() => this.handleRowHover(19)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 19 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>20</TableCell>{" "}
                         <TableCell>
@@ -626,7 +645,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Food Scarcity</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleIncomeClick} onMouseEnter={() => this.handleRowHover(20)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 20 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>21</TableCell>{" "}
                         <TableCell>
@@ -635,7 +654,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Income and Unemployment</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleHospitalStaysClick} onMouseEnter={() => this.handleRowHover(21)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 21 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>22</TableCell>{" "}
                         <TableCell>
@@ -644,7 +663,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell>Hospitalization</TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleHospitalStaysClick} onMouseEnter={() => this.handleRowHover(22)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 22 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell>23</TableCell>{" "}
                         <TableCell>
@@ -654,7 +673,7 @@ class MyDashboard extends Component {
                         </TableCell>{" "}
                         <TableCell> Hospitalization </TableCell>{" "}
                       </TableRow>{" "}
-                      <TableRow>
+                      <TableRow onClick={this.handleIncomeClick} onMouseEnter={() => this.handleRowHover(23)} onMouseLeave={this.handleRowLeave} sx={{ bgcolor: 23 === hoveredRow ? 'rgba(0, 0, 0, 0.04)' : 'inherit' }}>
                         {" "}
                         <TableCell> 24 </TableCell>{" "}
                         <TableCell>
