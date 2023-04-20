@@ -21,6 +21,8 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 class MyDashboard extends Component {
   constructor(props) {
@@ -28,11 +30,43 @@ class MyDashboard extends Component {
     this.state = {
       expanded1: false,
       expanded2: false,
+      expanded3: false,
+      expanded4: false,
+      expanded5: false,
+      expanded6: false,
+      expanded7: false,
+      expanded8: false,
+      expanded9: false,
+      expanded10: false,
+      expanded11: false,
+      expanded12: false,
+      expanded13: false,
+      expanded14: false,
+      expanded15: false,
+      expanded16: false,
+      expanded17: false,
+      expanded18: false,
       drawerOpen: false,
       currentPage: "home",
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
+    this.handleChange3 = this.handleChange3.bind(this);
+    this.handleChange4 = this.handleChange4.bind(this);
+    this.handleChange5 = this.handleChange5.bind(this);
+    this.handleChange6 = this.handleChange6.bind(this);
+    this.handleChange7 = this.handleChange7.bind(this);
+    this.handleChange8 = this.handleChange8.bind(this);
+    this.handleChange9 = this.handleChange9.bind(this);
+    this.handleChange10 = this.handleChange10.bind(this);
+    this.handleChange11 = this.handleChange11.bind(this);
+    this.handleChange12 = this.handleChange12.bind(this);
+    this.handleChange13 = this.handleChange13.bind(this);
+    this.handleChange14 = this.handleChange14.bind(this);
+    this.handleChange15 = this.handleChange15.bind(this);
+    this.handleChange16 = this.handleChange16.bind(this);
+    this.handleChange17 = this.handleChange17.bind(this);
+    this.handleChange18 = this.handleChange18.bind(this);
   }
 
   componentDidMount() {
@@ -54,13 +88,133 @@ class MyDashboard extends Component {
     });
   }
 
+  handleChange3() {
+    this.setState({
+      expanded3: !this.state.expanded3,
+    });
+  }
+
+  handleChange4() {
+    this.setState({
+      expanded4: !this.state.expanded4,
+    });
+  }
+
+  handleChange5() {
+    this.setState({
+      expanded5: !this.state.expanded5,
+    });
+  }
+
+  handleChange6() {
+    this.setState({
+      expanded6: !this.state.expanded6,
+    });
+  }
+
+  handleChange7() {
+    this.setState({
+      expanded7: !this.state.expanded7,
+    });
+  }
+
+  handleChange8() {
+    this.setState({
+      expanded8: !this.state.expanded8,
+    });
+  }
+
+  handleChange9() {
+    this.setState({
+      expanded9: !this.state.expanded9,
+    });
+  }
+
+  handleChange10() {
+    this.setState({
+      expanded10: !this.state.expanded10,
+    });
+  }
+
+  handleChange11() {
+    this.setState({
+      expanded11: !this.state.expanded11,
+    });
+  }
+
+  handleChange12() {
+    this.setState({
+      expanded12: !this.state.expanded12,
+    });
+  }
+
+  handleChange13() {
+    this.setState({
+      expanded13: !this.state.expanded13,
+    });
+  }
+
+  handleChange14() {
+    this.setState({
+      expanded14: !this.state.expanded14,
+    });
+  }
+
+  handleChange15() {
+    this.setState({
+      expanded15: !this.state.expanded15,
+    });
+  }
+
+  handleChange16() {
+    this.setState({
+      expanded16: !this.state.expanded16,
+    });
+  }
+
+  handleChange17() {
+    this.setState({
+      expanded17: !this.state.expanded17,
+    });
+  }
+
+  handleChange18() {
+    this.setState({
+      expanded18: !this.state.expanded18,
+    });
+  }
+
   handleDrawerClick = () => {
     this.setState((prevState) => ({
       drawerOpen: !prevState.drawerOpen,
     }));
   };
 
+  resetExpandedStates() {
+    this.setState({
+      expanded1: false,
+      expanded2: false,
+      expanded3: false,
+      expanded4: false,
+      expanded5: false,
+      expanded6: false,
+      expanded7: false,
+      expanded8: false,
+      expanded9: false,
+      expanded10: false,
+      expanded11: false,
+      expanded12: false,
+      expanded13: false,
+      expanded14: false,
+      expanded15: false,
+      expanded16: false,
+      expanded17: false,
+      expanded18: false
+    });
+  }
+
   handleHomeClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "home",
@@ -69,6 +223,7 @@ class MyDashboard extends Component {
   };
 
   handleHospitalStaysClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "hospitalStays",
@@ -77,6 +232,7 @@ class MyDashboard extends Component {
   };
 
   handleFoodScarcityClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "foodScarcity",
@@ -85,6 +241,7 @@ class MyDashboard extends Component {
   };
 
   handleIncomeClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "incomeUnemployment",
@@ -93,6 +250,7 @@ class MyDashboard extends Component {
   };
 
   handleOnsiteWorkClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "onsiteWork",
@@ -101,6 +259,7 @@ class MyDashboard extends Component {
   };
 
   handleRuralUrbanClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "ruralUrban",
@@ -109,6 +268,7 @@ class MyDashboard extends Component {
   };
 
   handleVaxClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "vax",
@@ -117,6 +277,7 @@ class MyDashboard extends Component {
   };
 
   handleMiscClick = () => {
+    this.resetExpandedStates();
     this.setState(
       {
         currentPage: "misc",
@@ -212,7 +373,14 @@ class MyDashboard extends Component {
                   Dates: August 24, 2022 - April 21, 2023
                 </Typography>
               </Box>
-
+              <Box padding={2}>
+  <a href="https://github.com/stevenptran/Covid-MQP">
+    <Button variant="contained" style={{ backgroundColor: '#333' }}>
+      <GitHubIcon style={{ marginRight: '8px' }}/>
+      GitHub Repo
+    </Button>
+  </a>
+</Box>
               <Box padding={2}>
                 <Typography variant="h6">Team Members:</Typography>
                 <TableContainer component={Paper}>
@@ -265,7 +433,7 @@ class MyDashboard extends Component {
 
               <Box padding={2}>
                 {" "}
-                <Typography variant="h6"> Questions </Typography>
+                <Typography variant="h6"> Questions: </Typography>
                 <TableContainer component={Paper}>
                   <Table>
                     <TableHead>
@@ -300,7 +468,7 @@ class MyDashboard extends Component {
                           Is there a relationship between vaccinations and type
                           of region (rural or urban)?
                         </TableCell>{" "}
-                        <TableCell>Rural/Urban Regions</TableCell>{" "}
+                        <TableCell>Vaccinations</TableCell>{" "}
                       </TableRow>{" "}
                       <TableRow>
                         {" "}
@@ -408,7 +576,7 @@ class MyDashboard extends Component {
                         <TableCell>
                           {" "}
                           How much of the older population receives an
-                          additional booster vaccine after the first ?{" "}
+                          additional booster vaccine after the first?{" "}
                         </TableCell>{" "}
                         <TableCell> Vaccinations </TableCell>{" "}
                       </TableRow>{" "}
@@ -417,8 +585,8 @@ class MyDashboard extends Component {
                         <TableCell> 16 </TableCell>{" "}
                         <TableCell>
                           {" "}
-                          On average , what date did each state close their
-                          schools ?{" "}
+                          On average, what date did each state close their
+                          schools?{" "}
                         </TableCell>{" "}
                         <TableCell> Miscellaneous </TableCell>{" "}
                       </TableRow>
@@ -427,9 +595,7 @@ class MyDashboard extends Component {
                         <TableCell> 17 </TableCell>{" "}
                         <TableCell>
                           {" "}
-                          What is the relation between deaths involving COVID -
-                          19 and average income in each county from 2019 , 2020
-                          , and 2021 ?{" "}
+                          What is the relation between deaths involving COVID-19 and average income in each county from 2019, 2020, and 2021?{" "}
                         </TableCell>
                         <TableCell>Income and Unemployment</TableCell>{" "}
                       </TableRow>
@@ -493,14 +659,23 @@ class MyDashboard extends Component {
                         <TableCell> 24 </TableCell>{" "}
                         <TableCell>
                           {" "}
-                          How did unemployment during the COVID - 19 pandemic
-                          affect mental health help ?{" "}
+                          How did unemployment during the COVID-19 pandemic
+                          affect mental health help?{" "}
                         </TableCell>{" "}
                         <TableCell> Income and Unemployment </TableCell>{" "}
                       </TableRow>{" "}
                     </TableBody>
                   </Table>
                 </TableContainer>
+              </Box>
+              <Box padding={2}>
+              <Typography variant="h6"> Report: </Typography>
+              <iframe
+    src="https://drive.google.com/file/d/1ofSmD5FAg39sqZSCzCegd3Jq9ab7Gm9t/preview"
+    width="100%"
+    height="800px"
+    style={{ border: 'none' }}
+  />
               </Box>
             </div>
           ) : this.state.currentPage === "hospitalStays" ? (
@@ -640,92 +815,24 @@ class MyDashboard extends Component {
             </div>
             ) : this.state.currentPage === "foodScarcity" ? (
               <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="foodScarcity"
+                expanded={this.state.expanded3}
+                onChange={this.handleChange3}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                  What is the effect on state mandated restaurant action on food scarcity during the COVID-19 pandemic?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1681948842913"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -736,8 +843,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="N/A"
+                          src="https://public.tableau.com/static/images/Fo/FoodScarcityVsRestaurants/Dashboard4/1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -754,13 +861,143 @@ class MyDashboard extends Component {
                       <param name="site_root" value="" />
                       <param
                         name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        value="FoodScarcityVsRestaurants/Dashboard4"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https://public.tableau.com/static/images/Fo/FoodScarcityVsRestaurants/Dashboard4/1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                key="foodScarcityUnemployment"
+                expanded={this.state.expanded7}
+                onChange={this.handleChange7}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How does unemployment during the COVID-19 pandemic relate to food scarcity in each state?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681952716709"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Un&#47;UnemploymentVSFoodScarcity&#47;Dashboard1&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="UnemploymentVSFoodScarcity&#47;Dashboard1"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Un&#47;UnemploymentVSFoodScarcity&#47;Dashboard1&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                key="foodScarcityIncome"
+                expanded={this.state.expanded8}
+                onChange={this.handleChange8}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How does state income impact food scarcity during COVID-19?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681953049694"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StateIncomeVsFoodScarcity&#47;Dashboard1&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="StateIncomeVsFoodScarcity&#47;Dashboard1"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;St&#47;StateIncomeVsFoodScarcity&#47;Dashboard1&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
@@ -775,92 +1012,24 @@ class MyDashboard extends Component {
             </div>
               ) : this.state.currentPage === "incomeUnemployment" ? (
                 <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="mentalHealth"
+                expanded={this.state.expanded6}
+                onChange={this.handleChange6}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                  How did unemployment during the COVID-19 pandemic affect mental health help?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1681950427010"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -871,8 +1040,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MentalHealthVsUnemployment&#47;Sheet1&#47;1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -889,13 +1058,13 @@ class MyDashboard extends Component {
                       <param name="site_root" value="" />
                       <param
                         name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        value="MentalHealthVsUnemployment&#47;Sheet1"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;MentalHealthVsUnemployment&#47;Sheet1&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
@@ -907,76 +1076,368 @@ class MyDashboard extends Component {
                   </div>
                 </AccordionDetails>
               </Accordion>
+
+              <Accordion
+                key="svi"
+                expanded={this.state.expanded9}
+                onChange={this.handleChange9}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How does the Social Vulnerability Index per county relate to the income per county during COVID-19?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681953229081"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SV&#47;SVIvsAvgIncome&#47;Sheet2&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="SVIvsAvgIncome&#47;Sheet2"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SV&#47;SVIvsAvgIncome&#47;Sheet2&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="deathsAvgIncome"
+                expanded={this.state.expanded10}
+                onChange={this.handleChange10}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  What is the relation between deaths involving COVID-19 and average income in each county from 2019, 2020, and 2021?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                <iframe
+      src="https://drive.google.com/file/d/16d_QWpeGYrwdmqWTRHR_rBXxLSbm9Tq8/preview"
+      width="100%"
+      height="600px"
+      style={{ border: 'none' }}
+    />
+  </AccordionDetails>
+  </Accordion>
+  <Accordion
+                key="triState"
+                expanded={this.state.expanded12}
+                onChange={this.handleChange12}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  Is there a connection between COVID-19 deaths and county income?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681966369014"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaliforniaCountyDeathsvs_CountyIncomein2021&#47;CaliforniaCountyDeathsvs_CountyIncomein2021Dashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="CaliforniaCountyDeathsvs_CountyIncomein2021&#47;CaliforniaCountyDeathsvs_CountyIncomein2021Dashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaliforniaCountyDeathsvs_CountyIncomein2021&#47;CaliforniaCountyDeathsvs_CountyIncomein2021Dashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681966380838"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ke&#47;KentuckyCountyDeathsvs_CountyIncomein2021&#47;KentuckyCountyDeathsvs_CountyIncomein2021Dashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="KentuckyCountyDeathsvs_CountyIncomein2021&#47;KentuckyCountyDeathsvs_CountyIncomein2021Dashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ke&#47;KentuckyCountyDeathsvs_CountyIncomein2021&#47;KentuckyCountyDeathsvs_CountyIncomein2021Dashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681966391233"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TexasCountyDeathsvs_CountyIncomein2021&#47;TexasCountyDeathsvs_CountyIncomein2021Dashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="TexasCountyDeathsvs_CountyIncomein2021&#47;TexasCountyDeathsvs_CountyIncomein2021Dashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TexasCountyDeathsvs_CountyIncomein2021&#47;TexasCountyDeathsvs_CountyIncomein2021Dashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="troublePaying"
+                expanded={this.state.expanded18}
+                onChange={this.handleChange18}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  Do states where there is a higher percentage of people who have difficulty paying for household expenses have a higher number of hospital deaths?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681968461575"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CK&#47;CKYWRTDCX&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="path"
+                        value="shared&#47;CKYWRTDCX"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CK&#47;CKYWRTDCX&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681968468774"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pl&#47;PlaceofDeathbyState&#47;PlaceofDeathbyStateDashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="PlaceofDeathbyState&#47;PlaceofDeathbyStateDashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pl&#47;PlaceofDeathbyState&#47;PlaceofDeathbyStateDashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              
             </div>
                 ) : this.state.currentPage === "onsiteWork" ? (
                   <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
+              
               <Accordion
                 key="hospitalAge"
                 expanded={this.state.expanded2}
@@ -988,8 +1449,7 @@ class MyDashboard extends Component {
                   id="panel2a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                    Temp1
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
@@ -1045,77 +1505,11 @@ class MyDashboard extends Component {
             </div>
                   ) : this.state.currentPage === "ruralUrban" ? (
                     <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
+              
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="urbanRuralCode"
+                expanded={this.state.expanded11}
+                onChange={this.handleChange11}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -1123,14 +1517,13 @@ class MyDashboard extends Component {
                   id="panel2a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                  Is there a discrepancy in COVID-19 deaths per state when comparing urban and rural regions?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1681965932728"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -1141,8 +1534,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="COVID-19 deaths per state by urban rural code dashboard "
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19DeathsperStatebyUrbanRuralCode&#47;COVID-19deathsperstatebyurbanruralcodedashboard&#47;1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -1159,13 +1552,124 @@ class MyDashboard extends Component {
                       <param name="site_root" value="" />
                       <param
                         name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        value="COVID-19DeathsperStatebyUrbanRuralCode&#47;COVID-19deathsperstatebyurbanruralcodedashboard"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19DeathsperStatebyUrbanRuralCode&#47;COVID-19deathsperstatebyurbanruralcodedashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="ruralNonPayments"
+                expanded={this.state.expanded16}
+                onChange={this.handleChange16}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography variant="h6">
+                  Do payments to rural and non-rural areas have an impact on the number of deaths in those regions?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681967835062"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="Payments to Non-Rural Areas Dashboard"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PaymentstoNon-RuralAreas&#47;PaymentstoNon-RuralAreasDashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="PaymentstoNon-RuralAreas&#47;PaymentstoNon-RuralAreasDashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PaymentstoNon-RuralAreas&#47;PaymentstoNon-RuralAreasDashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681967842018"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="Payments to Rural Areas Dashboard"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PaymentstoRuralAreas&#47;PaymentstoRuralAreasDashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="PaymentstoRuralAreas&#47;PaymentstoRuralAreasDashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pa&#47;PaymentstoRuralAreas&#47;PaymentstoRuralAreasDashboard&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
@@ -1180,92 +1684,24 @@ class MyDashboard extends Component {
             </div>
                     ) : this.state.currentPage === "vax" ? (
                       <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="olderIndividualsVax"
+                expanded={this.state.expanded5}
+                onChange={this.handleChange5}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                  How much of the older population receives an additional booster vaccine after the first?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1681950089531"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -1276,8 +1712,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ol&#47;OlderIndividualsVaccines&#47;Sheet1&#47;1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -1294,13 +1730,205 @@ class MyDashboard extends Component {
                       <param name="site_root" value="" />
                       <param
                         name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        value="OlderIndividualsVaccines&#47;Sheet1"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ol&#47;OlderIndividualsVaccines&#47;Sheet1&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="metro"
+                expanded={this.state.expanded13}
+                onChange={this.handleChange13}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  Is there a relationship between vaccinations and type of region (rural or urban)?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681966707271"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19Vaccinationsvs_LargeCentralMetroDeaths&#47;COVID-19Vaccinationsvs_LargeCentralMetroDeathsDashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="COVID-19Vaccinationsvs_LargeCentralMetroDeaths&#47;COVID-19Vaccinationsvs_LargeCentralMetroDeathsDashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19Vaccinationsvs_LargeCentralMetroDeaths&#47;COVID-19Vaccinationsvs_LargeCentralMetroDeathsDashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="cali"
+                expanded={this.state.expanded14}
+                onChange={this.handleChange14}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  California County Vaccinations vs. County Income in 2021
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681967177731"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaliforniaCountyVaccinationsvs_CountyIncomein2021&#47;CaliforniaCountyVaccinationsvs_CountyIncomein2021Dashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="CaliforniaCountyVaccinationsvs_CountyIncomein2021&#47;CaliforniaCountyVaccinationsvs_CountyIncomein2021Dashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaliforniaCountyVaccinationsvs_CountyIncomein2021&#47;CaliforniaCountyVaccinationsvs_CountyIncomein2021Dashboard&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="noncore"
+                expanded={this.state.expanded17}
+                onChange={this.handleChange17}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  COVID-19 Vaccinations vs. Noncore Deaths
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681968204845"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19Vaccinationsvs_NoncoreDeaths&#47;COVID-19Vaccinationsvs_NoncoreDeathsDashboard&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="COVID-19Vaccinationsvs_NoncoreDeaths&#47;COVID-19Vaccinationsvs_NoncoreDeathsDashboard"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19Vaccinationsvs_NoncoreDeaths&#47;COVID-19Vaccinationsvs_NoncoreDeathsDashboard&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
@@ -1315,92 +1943,24 @@ class MyDashboard extends Component {
             </div>
                       ) : this.state.currentPage === "misc" ? (
                         <div>
-              {this.state.currentPage === "hospitalStays" && (
-                <Accordion
-                  key="hospitalDischarge"
-                  expanded={this.state.expanded1}
-                  onChange={this.handleChange1}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                  >
-                    <Typography variant="h6">
-                      Change in Average Length of Hospital Stays Based on
-                      Discharge Status
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <div
-                      className="tableauPlaceholder"
-                      id="viz1681880993682"
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
-                    >
-                      <noscript>
-                        <a href="#">
-                          <img
-                            alt="Change in Average Length of Hospital Stays Based on Discharge Status "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1_rss.png"
-                            style={{ border: "none" }}
-                          />
-                        </a>
-                      </noscript>
-                      <object
-                        className="tableauViz"
-                        style={{ width: "100%", height: "800px" }}
-                      >
-                        <param
-                          name="host_url"
-                          value="https%3A%2F%2Fpublic.tableau.com%2F"
-                        />
-                        <param name="embed_code_version" value="3" />
-                        <param name="site_root" value="" />
-                        <param
-                          name="name"
-                          value="AvgLengthOfStaysDischargeStatus&#47;Sheet1"
-                        />
-                        <param name="tabs" value="no" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                          name="static_image"
-                          value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysDischargeStatus&#47;Sheet1&#47;1.png"
-                        />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                      </object>
-                    </div>
-                  </AccordionDetails>
-                </Accordion>
-              )}
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="AvgSchoolClosure"
+                expanded={this.state.expanded4}
+                onChange={this.handleChange4}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel2a-content"
-                  id="panel2a-header"
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
                 >
                   <Typography variant="h6">
-                    Change in Average Length of Hospital Stays Based on Age
-                    Group
+                  On average, what date did each state close their schools?
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1681949697025"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -1411,8 +1971,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageSchoolClosure&#47;Sheet1&#47;1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -1429,13 +1989,77 @@ class MyDashboard extends Component {
                       <param name="site_root" value="" />
                       <param
                         name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        value="AverageSchoolClosure&#47;Sheet1"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageSchoolClosure&#47;Sheet1&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="telehealth"
+                expanded={this.state.expanded15}
+                onChange={this.handleChange15}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  Is there a connection between household telehealth and place of death?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1681967593728"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
