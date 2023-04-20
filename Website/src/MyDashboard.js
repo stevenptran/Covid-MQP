@@ -23,6 +23,7 @@ import TableBody from "@mui/material/TableBody";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Slide from '@mui/material/Slide';
 
 class MyDashboard extends Component {
   constructor(props) {
@@ -48,6 +49,7 @@ class MyDashboard extends Component {
       expanded18: false,
       drawerOpen: false,
       currentPage: "home",
+      selectedPage: "Home",
     };
     this.handleChange1 = this.handleChange1.bind(this);
     this.handleChange2 = this.handleChange2.bind(this);
@@ -218,6 +220,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "home",
+        selectedPage: "Home",
       }
     );
   };
@@ -227,6 +230,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "hospitalStays",
+        selectedPage: "Hospitalization",
       }
     );
   };
@@ -236,6 +240,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "foodScarcity",
+        selectedPage: "Food Scarcity",
       }
     );
   };
@@ -245,6 +250,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "incomeUnemployment",
+        selectedPage: "Income and Unemployment",
       }
     );
   };
@@ -254,6 +260,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "onsiteWork",
+        selectedPage: "Onsite Work",
       }
     );
   };
@@ -263,6 +270,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "ruralUrban",
+        selectedPage: "Rural/Urban Regions",
       }
     );
   };
@@ -272,6 +280,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "vax",
+        selectedPage: "Vaccinations",
       }
     );
   };
@@ -281,6 +290,7 @@ class MyDashboard extends Component {
     this.setState(
       {
         currentPage: "misc",
+        selectedPage: "Miscellaneous",
       }
     );
   };
@@ -312,7 +322,7 @@ class MyDashboard extends Component {
     return (
       <React.Fragment>
         <Drawer variant="persistent" anchor="left" open={this.state.drawerOpen}>
-          <IconButton onClick={this.handleDrawerClick}>
+          <IconButton style={{ width: '100%', height: '6%' }} onClick={this.handleDrawerClick}>
             <ChevronLeftIcon />
           </IconButton>
           <List>
@@ -326,7 +336,7 @@ class MyDashboard extends Component {
               "Vaccinations",
               "Miscellaneous",
             ].map((text) => (
-              <ListItem key={text} disablePadding style={text === "Home" ? { borderTop: "1px solid black", borderBottom: "1px solid black" } : undefined}>
+              <ListItem key={text} disablePadding style={text === this.state.selectedPage ? { borderTop: "1px solid black", borderBottom: "1px solid black" } : undefined}>
                 <ListItemButton
                   onClick={
                     text === "Home"
@@ -366,10 +376,10 @@ class MyDashboard extends Component {
           >
             {!this.state.drawerOpen && (
               <IconButton onClick={this.handleDrawerClick}>
-                <MenuIcon />
+                <MenuIcon style={{ color: 'white' }} />
               </IconButton>
             )}
-            <Typography variant="h4" onClick={this.handleHomeClick}>
+            <Typography variant="h4" style={{ marginLeft: 10 }} onClick={this.handleHomeClick}>
               COVID-MQP
             </Typography>
           </div>
@@ -387,7 +397,7 @@ class MyDashboard extends Component {
                 </Typography>
               </Box>
               <Box padding={2}>
-  <a href="https://github.com/stevenptran/Covid-MQP">
+  <a href="https://github.com/stevenptran/Covid-MQP" target="_blank" rel="noopener noreferrer">
     <Button variant="contained" style={{ backgroundColor: '#333' }}>
       <GitHubIcon style={{ marginRight: '8px' }}/>
       GitHub Repo
