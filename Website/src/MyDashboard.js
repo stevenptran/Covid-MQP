@@ -23,6 +23,7 @@ import TableBody from "@mui/material/TableBody";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Slide from '@mui/material/Slide';
 
 class MyDashboard extends Component {
@@ -47,6 +48,12 @@ class MyDashboard extends Component {
       expanded16: false,
       expanded17: false,
       expanded18: false,
+      expanded19: false,
+      expanded20: false,
+      expanded21: false,
+      expanded22: false,
+      expanded23: false,
+      expanded24: false,
       drawerOpen: false,
       currentPage: "home",
       selectedPage: "Home",
@@ -69,6 +76,12 @@ class MyDashboard extends Component {
     this.handleChange16 = this.handleChange16.bind(this);
     this.handleChange17 = this.handleChange17.bind(this);
     this.handleChange18 = this.handleChange18.bind(this);
+    this.handleChange19 = this.handleChange19.bind(this);
+    this.handleChange20 = this.handleChange20.bind(this);
+    this.handleChange21 = this.handleChange21.bind(this);
+    this.handleChange22 = this.handleChange22.bind(this);
+    this.handleChange23 = this.handleChange23.bind(this);
+    this.handleChange24 = this.handleChange24.bind(this);
   }
 
   componentDidMount() {
@@ -186,6 +199,42 @@ class MyDashboard extends Component {
     });
   }
 
+  handleChange19() {
+    this.setState({
+      expanded19: !this.state.expanded19,
+    });
+  }
+
+  handleChange20() {
+    this.setState({
+      expanded20: !this.state.expanded20,
+    });
+  }
+
+  handleChange21() {
+    this.setState({
+      expanded21: !this.state.expanded21,
+    });
+  }
+
+  handleChange22() {
+    this.setState({
+      expanded22: !this.state.expanded22,
+    });
+  }
+
+  handleChange23() {
+    this.setState({
+      expanded23: !this.state.expanded23,
+    });
+  }
+
+  handleChange24() {
+    this.setState({
+      expanded24: !this.state.expanded24,
+    });
+  }
+
   handleDrawerClick = () => {
     this.setState((prevState) => ({
       drawerOpen: !prevState.drawerOpen,
@@ -211,7 +260,11 @@ class MyDashboard extends Component {
       expanded15: false,
       expanded16: false,
       expanded17: false,
-      expanded18: false
+      expanded18: false,
+      expanded19: false,
+      expanded20: false,
+      expanded21: false,
+      expanded22: false,
     });
   }
 
@@ -412,20 +465,45 @@ class MyDashboard extends Component {
                       <TableRow>
                         <TableCell><b>Name</b></TableCell>
                         <TableCell><b>Major(s)</b></TableCell>
+                        <TableCell><b>Profiles</b></TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
                       <TableRow>
                         <TableCell>Steven Tran</TableCell>
                         <TableCell>Computer Science & Data Science</TableCell>
+                        <TableCell>
+            <Button href="https://www.linkedin.com/in/stevenptran/" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon />
+            </Button>
+            <Button href="https://github.com/stevenptran" target="_blank" rel="noopener noreferrer">
+            <GitHubIcon style={{ color: "#181717" }} />
+            </Button>
+          </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell>Dylan Shanes</TableCell>
                         <TableCell>Computer Science</TableCell>
+                        <TableCell>
+            <Button href="https://www.linkedin.com/in/dylan-shanes-758113205/" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon />
+            </Button>
+            <Button href="https://github.com/dshanes" target="_blank" rel="noopener noreferrer">
+            <GitHubIcon style={{ color: "#181717" }} />
+            </Button>
+          </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell>Tia Mehta</TableCell>
                         <TableCell>Computer Science</TableCell>
+                        <TableCell>
+            <Button href="https://www.linkedin.com/in/tia-mehta/" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon />
+            </Button>
+            <Button href="https://github.com/tiatmehta" target="_blank" rel="noopener noreferrer">
+            <GitHubIcon style={{ color: "#181717" }} />
+            </Button>
+          </TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
@@ -1038,6 +1116,136 @@ class MyDashboard extends Component {
                   </div>
                 </AccordionDetails>
               </Accordion>
+
+              <Accordion
+                key="foodScarcityCourse"
+                expanded={this.state.expanded19}
+                onChange={this.handleChange19}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How has food scarcity changed in the United States throughout the course of the pandemic?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682044738641"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3T&#47;3TWHF89CM&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="path"
+                        value="shared&#47;3TWHF89CM"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3T&#47;3TWHF89CM&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                key="foodScarcityDeaths"
+                expanded={this.state.expanded21}
+                onChange={this.handleChange21}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How does food scarcity in America relate to the COVID-19 deaths in each state?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682045086798"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;FoodScarcity2&#47;FoodScarcityandCovidDeaths&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="FoodScarcity2&#47;FoodScarcityandCovidDeaths"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;FoodScarcity2&#47;FoodScarcityandCovidDeaths&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
             </div>
               ) : this.state.currentPage === "incomeUnemployment" ? (
                 <div>
@@ -1468,9 +1676,9 @@ class MyDashboard extends Component {
                   <div>
               
               <Accordion
-                key="hospitalAge"
-                expanded={this.state.expanded2}
-                onChange={this.handleChange2}
+                key="onsiteChange"
+                expanded={this.state.expanded20}
+                onChange={this.handleChange20}
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -1478,13 +1686,13 @@ class MyDashboard extends Component {
                   id="panel2a-header"
                 >
                   <Typography variant="h6">
-                    Temp1
+                  Onsite workers
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <div
                     className="tableauPlaceholder"
-                    id="viz1681932596699"
+                    id="viz1682044931052"
                     style={{
                       position: "relative",
                       width: "100%",
@@ -1495,8 +1703,8 @@ class MyDashboard extends Component {
                     <noscript>
                       <a href="#">
                         <img
-                          alt="Change in Average Length of Hospital Stays Based on Age Group "
-                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1_rss.png"
+                          alt="N/A "
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JS&#47;JS6Q9ZF2P&#47;1_rss.png"
                           style="border: none"
                         />
                       </a>
@@ -1512,14 +1720,14 @@ class MyDashboard extends Component {
                       <param name="embed_code_version" value="3" />
                       <param name="site_root" value="" />
                       <param
-                        name="name"
-                        value="AvgLengthOfStaysAge&#47;Sheet1"
+                        name="path"
+                        value="shared&#47;JS6Q9ZF2P"
                       />
                       <param name="tabs" value="no" />
                       <param name="toolbar" value="yes" />
                       <param
                         name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AvgLengthOfStaysAge&#47;Sheet1&#47;1.png"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;JS&#47;JS6Q9ZF2P&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
@@ -1969,6 +2177,70 @@ class MyDashboard extends Component {
                   </div>
                 </AccordionDetails>
               </Accordion>
+              <Accordion
+                key="excessVax"
+                expanded={this.state.expanded23}
+                onChange={this.handleChange23}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  Does the percentage of adults fully vaccinated in a state affect the excess deaths from COVID-19?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682045892444"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;ExcessDeaths_PrecentVacc&#47;Dashboard1&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="ExcessDeaths_PrecentVacc&#47;Dashboard1"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ex&#47;ExcessDeaths_PrecentVacc&#47;Dashboard1&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
             </div>
                       ) : this.state.currentPage === "misc" ? (
                         <div>
@@ -2089,6 +2361,181 @@ class MyDashboard extends Component {
                       <param
                         name="static_image"
                         value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;ConnectionBetweenHouseholdTelehealthandPlaceofDeath&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="ageCourse"
+                expanded={this.state.expanded22}
+                onChange={this.handleChange22}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  How have the age groups affected by COVID-19 changed over the course of the pandemic?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682045601072"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DeathsbyAge_16820403196390&#47;Dashboard1&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="DeathsbyAge_16820403196390&#47;Dashboard1"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;DeathsbyAge_16820403196390&#47;Dashboard1&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                key="popDense"
+                expanded={this.state.expanded24}
+                onChange={this.handleChange24}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography variant="h6">
+                  What is the connection between state populations, population densities, and COVID-19 deaths?
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682046155553"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidDeaths_by_Population&#47;Scatter&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="CovidDeaths_by_Population&#47;Scatter"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidDeaths_by_Population&#47;Scatter&#47;1.png"
+                      />
+                      <param name="animate_transition" value="yes" />
+                      <param name="display_static_image" value="yes" />
+                      <param name="display_spinner" value="yes" />
+                      <param name="display_overlay" value="yes" />
+                      <param name="display_count" value="yes" />
+                      <param name="language" value="en-US" />
+                    </object>
+                  </div>
+                  <div
+                    className="tableauPlaceholder"
+                    id="viz1682046161568"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      overflow: "auto",
+                    }}
+                  >
+                    <noscript>
+                      <a href="#">
+                        <img
+                          alt="N/A"
+                          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidDeaths_by_PopulationStatepopulations&#47;CovDeathsPops&#47;1_rss.png"
+                          style="border: none"
+                        />
+                      </a>
+                    </noscript>
+                    <object
+                      class="tableauViz"
+                      style={{ width: "100%", height: "800px" }}
+                    >
+                      <param
+                        name="host_url"
+                        value="https%3A%2F%2Fpublic.tableau.com%2F"
+                      />
+                      <param name="embed_code_version" value="3" />
+                      <param name="site_root" value="" />
+                      <param
+                        name="name"
+                        value="CovidDeaths_by_PopulationStatepopulations&#47;CovDeathsPops"
+                      />
+                      <param name="tabs" value="no" />
+                      <param name="toolbar" value="yes" />
+                      <param
+                        name="static_image"
+                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidDeaths_by_PopulationStatepopulations&#47;CovDeathsPops&#47;1.png"
                       />
                       <param name="animate_transition" value="yes" />
                       <param name="display_static_image" value="yes" />
