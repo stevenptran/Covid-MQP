@@ -29,6 +29,7 @@ import Slide from '@mui/material/Slide';
 class MyDashboard extends Component {
   constructor(props) {
     super(props);
+    this.drawerRef = React.createRef();
     this.state = {
       expanded1: false,
       expanded2: false,
@@ -89,7 +90,18 @@ class MyDashboard extends Component {
     script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
     script.async = true;
     document.body.appendChild(script);
+    document.addEventListener("mousedown", this.handleClickOutside);
   }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  handleClickOutside = (event) => {
+    if (this.drawerRef && !this.drawerRef.current.contains(event.target)) {
+      this.setState({ drawerOpen: false });
+    }
+  };
 
   handleChange1() {
     this.setState({
@@ -374,7 +386,7 @@ class MyDashboard extends Component {
     const { hoveredRow } = this.state;
     return (
       <React.Fragment>
-        <Drawer variant="persistent" anchor="left" open={this.state.drawerOpen}>
+        <Drawer variant="persistent" anchor="left" open={this.state.drawerOpen} ref={this.drawerRef}>
           <IconButton style={{ width: '100%', height: '6%' }} onClick={this.handleDrawerClick}>
             <ChevronLeftIcon />
           </IconButton>
