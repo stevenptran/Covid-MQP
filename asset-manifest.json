@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Covid-MQP/static/css/main.abf9750b.css",
-    "main.js": "/Covid-MQP/static/js/main.38d3d643.js",
+    "main.js": "/Covid-MQP/static/js/main.b7944101.js",
     "static/js/787.71e672d5.chunk.js": "/Covid-MQP/static/js/787.71e672d5.chunk.js",
     "index.html": "/Covid-MQP/index.html",
     "main.abf9750b.css.map": "/Covid-MQP/static/css/main.abf9750b.css.map",
-    "main.38d3d643.js.map": "/Covid-MQP/static/js/main.38d3d643.js.map",
+    "main.b7944101.js.map": "/Covid-MQP/static/js/main.b7944101.js.map",
     "787.71e672d5.chunk.js.map": "/Covid-MQP/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abf9750b.css",
-    "static/js/main.38d3d643.js"
+    "static/js/main.b7944101.js"
   ]
 }
